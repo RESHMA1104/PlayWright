@@ -14,7 +14,9 @@
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.0",
     "allure-playwright": "^2.15.1",
-    "cross-env": "^10.1.0"
+    "cross-env": "^10.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
   },
   "scripts": {
     "test:qa": "cross-env ENV=qa playwright test",
@@ -28,7 +30,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/RESHMA1104/TypeScript-Expleo/issues"
   },
