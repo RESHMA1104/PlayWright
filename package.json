@@ -19,6 +19,7 @@
     "typescript": "^6.0.3"
   },
   "scripts": {
+    "test": "npx playwright test",
     "test:qa": "cross-env ENV=qa playwright test",
     "test:uat": "cross-env ENV=uat playwright test",
     "test:prod": "cross-env ENV=prod playwright test"
