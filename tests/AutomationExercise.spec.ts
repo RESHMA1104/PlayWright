@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
 test('Login Test', async({page}) => {
-    await page.goto("https://automationexercise.com/");
+    test.setTimeout(60000);
+    await page.goto("https://automationexercise.com/",{
+        timeout : 60000
+    });
     await page.waitForTimeout(3000);
     await page.locator('//i[@class="fa fa-home"]').isVisible();
     await page.getByRole('link', {name : 'login'}).click();
@@ -9,7 +12,9 @@ test('Login Test', async({page}) => {
     await page.getByRole('button', {name : 'Signup'}).click();
     await page.locator('//div[@id="uniform-id_gender2"]').click();
     const hd = await expect(page.locator('//h2[@class="title text-center"]//child::b[text()="Enter Account Information"]'));
-    hd.toBeVisible();
+    hd.toBeVisible({
+        timeout : 10000
+    });
     await page.getByLabel('Password *').fill('Rosy@123');
     const day = await page.locator('#days');
     await day.selectOption('25');

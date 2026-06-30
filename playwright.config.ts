@@ -19,12 +19,14 @@ export default defineConfig({
 
   //retries : 2, 
 
+  //globalTimeout : 18000,
+
   reporter: [
   ['html', {open : 'always'}],
   ['allure-playwright']
   ],
 
-  timeout : 60000,
+  //timeout : 60000,
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
@@ -33,7 +35,9 @@ export default defineConfig({
     trace: 'on',
     headless : true,
     screenshot : 'only-on-failure',
-    video : 'retain-on-failure'
+    video : 'retain-on-failure',
+    //actionTimeout : 10000,
+    //navigationTimeout : 60000
   },
 
   projects: [

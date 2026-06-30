@@ -1,0 +1,23 @@
+[
+    {
+        "testName" : "Valid Demo Login",
+        "username" : "KiotAdmin",
+        "password" : "Kiot@123",
+        "expectedResult" : "Success",
+        "expectedMessage" : "Welcome"
+    },
+    {
+        "testName" : "Invalid Demo Login",
+        "username" : "KiotAdmin",
+        "password" : "Kiot123",
+        "expectedResult" : "Failure",
+        "expectedMessage" : "Wrong password."
+    },
+    {
+        "testName" : "Without username Login",
+        "username" : "",
+        "password" : "Kiot@123",
+        "expectedResult" : "Failure",
+        "expectedMessage" : "Please fill out Username and Password."
+    }
+]
