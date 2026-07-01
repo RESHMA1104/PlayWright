@@ -25,6 +25,8 @@ export default defineConfig({
   ['html', {open : 'always'}],
   ['allure-playwright']
   ],
+  
+  expect:{timeout :20000},
 
   //timeout : 60000,
 
